@@ -1,10 +1,19 @@
 var diceBoxPlayer1 = document.querySelector(".player1 > .dice");
 var diceHolesPlayer1 = document.querySelectorAll(".player1 >.dice > .diceHole");
+var player1Name = "Player1";
+var player1WinCountOutput = document.getElementById("player1WinCount");
+var player1WinCounter = 0;
+
 
 var diceBoxPlayer2 = document.querySelector(".player2 > .dice");
 var diceHolesPlayer2 = document.querySelectorAll(".player2 >.dice > .diceHole");
+var player2Name = "Player2";
+var player2WinCountOutput = document.getElementById("player2WinCount");
+var player2WinCounter = 0;
+
 
 var title = document.querySelector(".title");
+
 
 var player1Score ;
 var player2Score ; 
@@ -153,15 +162,25 @@ function player2 ()
     }
 
 }
-function winner ();
+function winner ()
 {
+    //fetch playernames 
+    player1Name = document.querySelector(".player1 > p").innerHTML;
+    player2Name = document.querySelector(".player2 > p").innerHTML;
+    console.log("User names :"+player1Name+ " & " +player2Name);
     if (player1Score > player2Score)
     {
-        title.innerHTML = "Player 1 is the winner!" ;
+        title.innerHTML = player1Name + " is the winner!" ;
+        player1WinCounter ++ ;
+        player1WinCountOutput.innerHTML = player1WinCounter;
+        player1WinCountOutput.classList.add("visible");
     }
     else if (player2Score > player1Score)
     {
-        title.innerHTML = "Player 2 is the winner!" ;
+        title.innerHTML = player2Name + " is the winner!" ;
+        player2WinCounter ++ ;
+        player2WinCountOutput.innerHTML = player2WinCounter;
+        player2WinCountOutput.classList.add("visible");
     }
     else 
     {
