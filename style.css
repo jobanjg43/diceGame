@@ -1,0 +1,151 @@
+body{
+    padding-left: 10vw;
+    padding-right: 10vw;
+    text-align: center;
+    background-color: rgb(22, 22, 19);
+    color: rgb(225, 230, 235);
+}
+*
+{
+    margin-top: 5%;
+}
+.container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.diceContainer{
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+
+}
+
+.dice {
+    max-width: 400px;
+    width: 100px;
+    max-height: 400px;
+    height: 100px;
+    background-color: rgba(192, 27, 27, 0.753);
+    border-radius: 10px;
+    padding: 5px;
+
+}
+/* dice class 1 hole */
+.dice1
+{   
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: ". . ."
+    ". dice11 ."
+    ". . .";
+
+ 
+}
+/* dice 2 */
+.dice2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: ". . dice11"
+    ". . ."
+    "dice12 . .";
+
+    
+}
+
+/* dice3  */
+.dice3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: ". . dice11"
+    ". dice12 ."
+    "dice13 . .";
+}
+.dice4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: "dice11 . dice13"
+    ". . ."
+    "dice12 . dice14";
+
+}
+.dice5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: "dice11 . dice13"
+    ". dice15 ."
+    "dice12 . dice14";
+
+}
+.dice6 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: "dice11 . dice12"
+    "dice13 . dice14 "
+    "dice15 . dice16";
+
+}
+.dice11 {grid-area : dice11;}
+.dice12 {grid-area : dice12;}
+.dice13 {grid-area : dice13;}
+.dice14 {grid-area : dice14;}
+.dice15 {grid-area : dice15;}
+.dice16 {grid-area : dice16;}
+
+.player1 , .player2 {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.diceHole {
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: none;
+    
+}
+.visible {
+    display:block
+}
+p{
+    font-size: 1.5rem;
+    color: rgb(150, 150, 144);
+}
+button{
+    margin-top: 100px;
+    padding:0px 10px 0px 10px;
+    max-width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(53, 123, 228);
+    box-shadow: 2px 2px 10px 1px rgb(77, 76, 80);
+    font-size: large;
+    font-weight: bold;
+    color: rgb(226, 228, 224);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
